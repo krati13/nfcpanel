@@ -1,0 +1,39 @@
+<!doctype html>
+<html>
+<head>
+<title>Line Chart</title>
+<script src="Chart.min.js"></script>
+<style>
+.labelChart {
+	text-align: center;
+	color: #133A41;
+	font-size: 24px;
+	padding: 5px;
+	position: absolute;
+	bottom: 0;
+	margin-left: 40px;
+	font-family: cursive;
+}
+</style>
+</head>
+<body>
+	<div style='text-align: center'>
+		<div style='display: inline-block'>
+			<canvas id="canvas" height="350" width="900"></canvas>
+		</div>
+	</div>
+	<div class='labelChart'>Foot-fall Graph</div>
+
+	<script>
+		var lineChartData = JSON.parse(parent.document
+				.getElementById('linedata').value);
+
+		window.onload = function() {
+			var ctx = document.getElementById("canvas").getContext("2d");
+			window.myLine = new Chart(ctx).Line(lineChartData, {
+				responsive : true
+			});
+		}
+	</script>
+</body>
+</html>

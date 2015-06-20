@@ -1,0 +1,36 @@
+<!doctype html>
+<html>
+	<head>
+		<title>Bar Chart</title>
+		<script src="Chart.min.js"></script>
+	</head>
+	<style>
+.labelChart {
+	text-align: center;
+	color: #133A41;
+	font-size: 24px;
+	padding: 5px;
+	position: absolute;
+	bottom: 0;
+	margin-left: 20px;
+	font-family: wf_segoe-ui_normal, Tahoma, Verdana, Arial, sans-serif !important;
+}
+</style>
+	<body>
+		<div>
+			<canvas id="canvas" height="650" width="800"></canvas>
+		</div>
+		
+		<div class='labelChart'>Transaction History</div>
+	
+	<script>
+	var barChartData=JSON.parse(parent.document.getElementById('bardata').value);
+	
+	window.onload = function(){
+		var ctx = document.getElementById("canvas").getContext("2d");
+		window.myBar = new Chart(ctx).Bar(barChartData, {responsive : true});
+	}
+
+	</script>
+	</body>
+</html>

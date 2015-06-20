@@ -1,0 +1,34 @@
+<!doctype html>
+<html>
+<head>
+<title>Pie Chart</title>
+<script src="Chart.min.js"></script>
+<style>
+.labelChart {
+	text-align: center;
+	color: #133A41;
+	font-size: 24px;
+	padding: 5px;
+	position: absolute;
+	bottom: 0;
+	margin-left: 0px;
+	font-family: wf_segoe-ui_normal, Tahoma, Verdana, Arial, sans-serif !important;
+}
+</style>
+</head>
+<body>
+	<div id="canvas-holder">
+		<canvas id="chart-area" width="300" height="300"></canvas>
+	</div>
+	<div class='labelChart'>Top 7 Popular Food Items</div>
+
+	<script>
+		var pieData = JSON.parse(parent.document.getElementById('piedata').value);
+
+		window.onload = function() {
+			var ctx = document.getElementById("chart-area").getContext("2d");
+			window.myPie = new Chart(ctx).Pie(pieData);
+		};
+	</script>
+</body>
+</html>

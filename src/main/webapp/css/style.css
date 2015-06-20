@@ -1,0 +1,620 @@
+.catBlock {
+	display: inline-block;
+	min-width: 250px;
+	margin: 5px;
+	padding: 5px;
+	font-size: 14px;
+	text-align: center;
+	line-height: 40px;
+	height: 50px;
+	background: whitesmoke;
+	border: 1px solid #ddd;
+	border-radius: 4px;
+	box-shadow: 0px 0px 20px #ccc;
+	cursor: pointer;
+}
+
+.catAddBlock {
+	display: inline-block;
+	width: 320px;
+	margin: 5px;
+	padding: 5px;
+	font-size: 14px;
+	text-align: center;
+	line-height: 40px;
+	height: 50px;
+	background: white;
+	border: 1px solid #ddd;
+	border-radius: 4px;
+	box-shadow: 0px 0px 20px #ccc;
+}
+
+.catAddBtn{
+	display: inline-block;
+	background: rgb(139, 228, 173);
+	height: 48px;padding: 4px;
+	float: right;
+	margin-top:-5px;
+	margin-right:-5px;
+	width:50px;
+	cursor: pointer;
+}
+
+.catUpdBtn{
+	background: rgb(231, 212, 82);
+	height: 48px;padding: 4px;
+	float: right;
+	margin-top:-5px;
+	margin-right:-5px;
+	width:50px;
+	cursor: pointer;
+	display: inline-block;
+}
+
+.catCanBtn{
+	border-radius:4px;
+	font-size: 14px;
+	text-align: center;
+	line-height: 40px;
+	height: 50px;
+	background: rgb(231, 110, 82);
+	color:white;
+	height: 48px;
+	padding: 4px;
+	margin-top:-5px;
+	margin-right:-5px;
+	width:50px;
+	cursor: pointer;
+	display: inline-block;
+	margin-left: 10px;
+}
+
+.googleBtn {
+	background: rgb(76, 142, 250);
+	border: 0;
+	border-radius: 2px;
+	box-sizing: border-box;
+	color: #fff;
+	cursor: pointer;
+	float: right;
+	font-size: .875em;
+	margin: 0;
+	padding: 10px 24px;
+	transition: box-shadow 200ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.collapseHeader {
+	outline: none;
+	text-align: left;
+}
+
+.activeBottomBtns {
+	width: 30%;
+	display: inline-block;
+}
+
+.counterWrap {
+	background: red;
+	color: white;
+	font-size: 12px;
+	display: none;
+	float: right;
+	width: 24px;
+	height: 24px;
+	text-align: center;
+	line-height: 24px;
+	border-radius: 50%;
+	margin-left: -5px;
+	margin-top: -15px;
+}
+
+.ahover_notify {
+	color: white !important;
+}
+
+.ahover_notify:hover {
+	color: #333 !important;
+	background: #eee !important;
+}
+
+.ahover_notifyActive {
+	background: #eee !important;
+	color: #333 !important;
+}
+
+.modal_lay_notify {
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	z-index: 100;
+	left: 0;
+	top: 0;
+	background: transparent;
+	display: none;
+}
+
+.notificationDetailsWrap {
+	position: fixed;
+	width: 400px;
+	max-height: 400px;
+	overflow-y: scroll;
+	overflow-x: hidden;
+	background: whitesmoke;
+	right: 0;
+	font-weight: normal;
+	border-bottom: 0px solid #bbb;
+	border-left: 0px solid #bbb;
+	border-right: 0px solid #bbb;
+	display: none;
+	border-radius: 0px;
+	box-shadow: 0px 10px 40px #ccc;
+}
+
+.notificationDetailsWrap .rows_head {
+	padding: 10px;
+	border-bottom: 1px solid #ddd;
+	font-weight: normal;
+	position: fixed;
+	width: 100%;
+	background: #eee;
+	margin-top: -2px;
+}
+
+.notificationDetailsWrap .rows {
+	font-size: 12px;
+	padding: 10px;
+	border-bottom: 1px solid #eee;
+	font-weight: normal;
+	color: #333 !important;
+}
+
+.notificationDetailsWrap .rows_head .header_notify {
+	font-size: 24px;
+	line-height: 32px;
+	color: #333;
+}
+
+.notificationDetailsWrap .rows_head .header_notify_old {
+	font-size: 22px;
+	line-height: 32px;
+	color: #7E94AE;
+	margin-left: 10px;
+	cursor: pointer;
+}
+
+.cursive {
+	font-family: cursive;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: bold;
+	line-height: 23px;
+}
+
+.imgPreview {
+	height: 120px;
+	width: auto;
+	display: inline-block;
+	margin-left: 10px;
+	margin-bottom: 10px;
+}
+
+.menuInput {
+	padding: 4px;
+	border: 1px solid #ccc;
+	outline: none;
+	border-radius: 8px;
+	font-size: 12px;
+}
+
+input {
+	padding: 8px;
+	border-radius: 4px;
+	border: 1px solid #ddd;
+	box-sizing: border-box;
+	outline: none;
+}
+
+body {
+	color: black;
+	background: transparent;
+	font-size: 12px;
+	font-family: wf_segoe-ui_normal, Tahoma, Verdana, Arial,
+		sans-serif !important;
+	font-stretch: normal;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: normal;
+}
+
+.navPage {
+	padding: 5px 8px 5px 8px;
+	background: #ddd;
+	cursor: pointer;
+	color: black !important;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+}
+
+.activePage {
+	background: white;
+}
+
+#mainContainerLoading {
+	z-index: 10001;
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	background: white;
+	opacity: 0.5;
+	top: 0;
+	left: 0;
+	display: none;
+	-webkit-transition: 0.5s all;
+	-moz-transition: 0.5s all;
+	-ms-transition: 0.5s all;
+	transition: 0.5s all;
+}
+
+.loader_gif {
+	border-radius: 50%;
+	width: 80px;
+	display: inline-block;
+	height: 80px;
+}
+
+.helloUser {
+	position: fixed;
+	right: 0;
+	margin-right: 5px;
+	top: 15px;
+	color: white !important;
+	z-index: 10001;
+}
+
+.footSearch {
+	width: 100%;
+	margin-left: -5px;
+}
+
+#mainContainer {
+	opacity: 0.9;
+}
+
+.ahover, .navbar-brand {
+	color: white !important;
+}
+
+.ahover {
+	font-size: 12px;
+}
+
+.ahover:hover {
+	background: #777 !important;
+	color: white !important;
+}
+
+.labelChart {
+	text-align: center;
+	color: #133A41;
+	font-size: 24px;
+	padding: 5px;
+	position: absolute;
+	bottom: 0;
+	margin-left: 40px;
+	font-family: cursive;
+}
+
+.navbar-default {
+	background: #333 !important;
+	border: 0px solid transparent !important;
+}
+
+.dropdown-menu {
+	background: #555 !important;
+}
+
+.menuArea {
+	padding: 4px;
+	border: 1px solid #ccc;
+	outline: none;
+	border-radius: 8px;
+	font-size: 12px;
+	width: 100%;
+	height: 26px;
+}
+
+.menuSelect {
+	padding: 4px;
+	border: 1px solid #ccc;
+	outline: none;
+	border-radius: 3px;
+	font-size: 12px;
+	height: 30px;
+}
+
+.container {
+	border-radius: 10px;
+	background: white;
+}
+
+.jbackground {
+	position: fixed;
+	left: 0;
+	right: 0;
+	z-index: -1;
+	width: 100%;
+	height: 800px;
+	display: block;
+	background-image: url(../images/background.jpg);
+	background-position: center;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-size: cover;
+	-webkit-filter: blur(5px);
+	-moz-filter: blur(10px);
+	-o-filter: blur(10px);
+	-ms-filter: blur(10px);
+	filter: blur(10px);
+	height: 800px;
+}
+
+.modal_popup {
+	position: fixed;
+	width: 900px;
+	z-index: 10001;
+	left: 50%;
+	margin-left: -450px;
+	top: 50px;
+	background: whitesmoke;
+	border-radius: 10px;
+	min-height: 100px;
+	display: none;
+}
+
+.modal_lay {
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	z-index: 10000;
+	left: 0;
+	top: 0;
+	background: #333;
+	opacity: 0.8;
+	display: none;
+}
+
+}
+.fixedDiv {
+	width: 100%;
+	position: fixed;
+	z-index: 1000;
+	top: 0;
+	left: 0;
+}
+
+.wbg {
+	background: white;
+}
+
+td {
+	text-align: left
+}
+
+.dashContainer {
+	padding: 20px;
+	text-align: center;
+}
+
+.dashWrap {
+	border: 1px solid transparent;
+	border-radius: 10px;
+	overflow: hidden;
+}
+
+.broderGrid {
+	padding: 10px;
+	text-align: center;
+	background: white;
+}
+
+.downBtnWrap {
+	margin-top: -10px;
+	float: right;
+	margin-right: -10px;
+}
+
+.downBtnWrap input {
+	border-radius: 0px !important;
+	padding: 10px !important;
+	font-size: 12px;
+}
+
+.gridTitle {
+	padding: 5px 8px 5px 8px;
+	font-style: normal;
+	font-variant: normal;
+	line-height: 30px;
+	text-align: left;
+	font-size: 20px;
+	color: white;
+	background: #777 !important;
+	margin-left: -10px;
+	margin-top: -10px;
+	margin-right: -10px;
+	margin-bottom: 10px;
+}
+
+.required_err {
+	border: 1px solid red !important;
+}
+
+.childGrid {
+	display: inline-block;
+	width: 48%;
+}
+
+.page-container {
+	text-align: center;
+}
+
+.flip {
+	-webkit-perspective: 1000;
+	perspective: 1000;
+	position: relative;
+}
+
+.flip .card.flipped {
+	-webkit-transform: rotatex(-180deg);
+	transform: rotatex(-180deg);
+}
+
+.flip .card {
+	height: 100%;
+	-webkit-transform-style: preserve-3d;
+	-webkit-transition: 1.0s;
+	transform-style: preserve-3d;
+	transition: 1.0s;
+}
+
+.flip .card .face {
+	-webkit-backface-visibility: hidden;
+	backface-visibility: hidden;
+	z-index: 2;
+}
+
+.flip .card .front {
+	position: absolute;
+	width: 100%;
+	z-index: 1;
+}
+
+.flip .card .back {
+	-webkit-transform: rotatex(-180deg);
+	transform: rotatex(-180deg);
+}
+
+.inner {
+	margin: 0px !important;
+}
+
+.lockscreen {
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+}
+/* Remove the background from the body element */
+.lockscreen>body { //
+	background: transparent;
+}
+/* We will put the dynamically generated digital clock here */
+.lockscreen .headline {
+	text-shadow: 1px 3px 5px rgba(255, 255, 255, 0.5);
+	font-weight: 300;
+	-webkit-font-smoothing: antialiased !important;
+	opacity: 1;
+	font-size: 90px;
+	width: 550px;
+}
+
+label {
+	margin: 0px !important;
+}
+
+@media screen and (max-width: 480px) {
+	.lockscreen .headline {
+		font-size: 60px;
+		margin-bottom: 40px;
+	}
+}
+/* User name [optional] */
+.lockscreen .lockscreen-name {
+	text-align: center;
+	font-weight: 600;
+	font-size: 16px;
+}
+/* Will contain the image and the sign in form */
+.lockscreen-item {
+	padding: 0;
+	background: #fff;
+	position: relative;
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+	border-radius: 4px;
+	margin: 10px auto;
+	width: 290px;
+}
+
+.lockscreen-item:before, .lockscreen-item:after {
+	display: table;
+	content: " ";
+}
+
+.lockscreen-item:after {
+	clear: both;
+}
+/* User image */
+.lockscreen-item>.lockscreen-image {
+	position: absolute;
+	left: -15px;
+	top: -15px;
+	background: #fff;
+	padding: 15px;
+	-webkit-border-radius: 50%;
+	-moz-border-radius: 50%;
+	border-radius: 50%;
+	z-index: 10;
+}
+
+.lockscreen-item>.lockscreen-image>img {
+	width: 70px;
+	height: 70px;
+	-webkit-border-radius: 50%;
+	-moz-border-radius: 50%;
+	border-radius: 50%;
+}
+/* Contains the password input and the login button */
+.lockscreen-item>.lockscreen-credentials {
+	margin-left: 80px;
+}
+
+.lockscreen-item>.lockscreen-credentials input {
+	border: 0 !important;
+}
+
+.lockscreen-item>.lockscreen-credentials .btn {
+	background-color: #fff;
+	border: 0;
+}
+/* Extra to give the user an option to navigate the website [optional]*/
+.lockscreen-link {
+	margin-top: 30px;
+	text-align: center;
+}
+
+.navbar-nav>li>a {
+	padding-left: 20px;
+}
+
+.centerContainer {
+	width: 900px;
+	display: inline-block;
+}
+
+.welcomeMessage {
+	font-size: 22px;
+	display: inline-block;
+	margin-top: 250px;
+}
+
+@media screen and (max-width:640px) {
+	.centerContainer {
+		width: 400px;
+	}
+}
+
+@media screen and (max-width:780px) {
+	.centerContainer {
+		width: 400px;
+	}
+}

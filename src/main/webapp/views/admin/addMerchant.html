@@ -1,0 +1,211 @@
+<style>
+select {
+	display: inline-block !important;
+}
+
+.forminput {
+	width: 48%;
+	display: inline-block !important;
+	margin: 10px 0px 10px 0px;
+}
+
+select {
+	padding: 5px;
+	border: 1px solid #ddd;
+	border-radius: 4px;
+}
+</style>
+<div>
+	<div class='centerContainer'>
+		<div class="panel panel-default">
+			<div class="panel-heading">
+				<strong> Add New Merchant</strong>
+			</div>
+			<div style="text-align: center;" class="panel-body">
+				<form method="post" id="merchantForm">
+					<br />
+					<div>
+						<input required="required" type="text" name='firstName'
+							class="form-control forminput" placeholder="First Name" pattern=".{5,30}" />
+						<input required="required" type="text"
+							name='lastName' class="form-control forminput" placeholder="Last Name"
+							pattern=".{5,30}" />
+					</div>
+
+					<div>
+						<input  required="required" type="text"
+							name='businessName' id='businessName' class="form-control forminput"
+							placeholder="Business Name" pattern=".{5,30}" /> <input
+							 required="required" type="email" name='email'
+							class="form-control forminput" placeholder="Email" pattern=".{5,30}" />
+					</div>
+
+					<div>
+						<input dataType='number'  required="required"
+							type="text" name='mobile' class="form-control forminput"
+							placeholder="Mobile" pattern=".{5,30}" /> <input
+							 required="required" type="text"
+							name='landline' class="form-control forminput" dataType='number'
+							placeholder="Landline" pattern=".{5,30}" />
+					</div>
+					
+					<div>
+					
+					<div style="width:48%;text-align: left;" class='forminput'>
+							<h4>How many tables are there in restaurant?</h4>
+							<input type='number' dataType='number' required="required"
+								placeholder='Number' name='tableCount'
+								style='text-align: center;width:100px;'/>
+						</div>
+					<div style="width:48%;text-align: left;" class='forminput'>
+						<input type="text"
+							id="fbLikeUrl" name='fbLikeUrl' class="form-control"
+							placeholder="Facebook Page URL" />
+					</div> 
+					
+					</div>
+
+					<div>
+						<input  required="required" type="text"
+							id="from" name='validFrom' class="form-control forminput"
+							placeholder="Valid From" /> <input 
+							required="required" type="text" id="to" name='validTo'
+							class="form-control forminput" placeholder="Valid To" />
+					</div>
+
+					<div>
+						<input  required="required" type="text"
+							name='city' class="form-control forminput" placeholder="City"
+							pattern=".{5,30}" /> <input 
+							required="required" type="text" name='state' class="form-control forminput"
+							placeholder="State" pattern=".{5,30}" />
+					</div>
+
+					<div>
+						<input  required="required" type="number"
+							name='pincode' dataType='number' class="form-control forminput"
+							placeholder="PIN" pattern=".{5,30}" /> <input 
+							required="required" type="url" name='website'
+							class="form-control forminput" placeholder="Website" pattern=".{5,30}" />
+					</div>
+					
+					<div>
+							<div style="width:48%;text-align: left;" class='forminput'>
+								<h4>Do you want to enable Payment gateway?</h4>
+<!-- 							<div id="paymentOption" class="styledCheck"> -->
+<!-- 								<input type="checkbox" name="paymentOption" value="1"/> -->
+<!-- 							</div> -->
+							<select class='menuSelect' required="required" placeholder='Payment Option'
+									name="paymentOption">
+									<option value='1'>Enable</option>
+									<option value='2' selected>Disable</option>
+							</select>
+							</div>
+							<div style="width:48%;text-align: left;" class='forminput'>
+								<h4>Choose Merchant type</h4>
+<!-- 							<div id="merchantType" class="styledCheck"> -->
+<!-- 								<input type="checkbox" name="merchantType" value="1" /> -->
+<!-- 							</div> -->
+							<select class='menuSelect' required="required" placeholder='Merchant type'
+									name="merchantType">
+									<option value='1'>Admin</option>
+									<option value='2'>Active</option>
+									<option value='3' selected>Passive</option>
+								</select>
+							</div>
+							<div style='min-height:60px;display:none'>
+								<div style="display: inline-block;float:right;" id='getMyImageMenu'>
+									<div id="mulitplefileuploader">Upload Company Logo</div>
+									<div id="status"></div>
+								</div>
+								<div style="display: inline-block;" id="filePreview"><img src="" class="imgPreview"/></div>
+							</div>
+						</div>
+						
+					
+
+					<input type="button" class="btn btn-success"
+						value='Register Merchant'
+						onclick='j_loader_POST("/admin/addMerchant","json","mainContainer","merchantForm")' />
+				</form>
+			</div>
+		</div>
+	</div>
+</div>
+<script>
+	$(function() {
+		$("#from").datepicker({
+			//defaultDate: "+1w",
+			changeMonth : true,
+			numberOfMonths : 1,
+			onClose : function() {
+				$("#from").datepicker("option", "dateFormat", "yy-mm-dd");
+			}
+		});
+		$("#to").datepicker({
+			//defaultDate: "+1w",
+			changeMonth : true,
+			numberOfMonths : 1,
+			onClose : function() {
+				$("#to").datepicker("option", "dateFormat", "yy-mm-dd");
+			}
+		});
+		$("#paymentOption").switchButton({
+	          on_label: 'Enable',
+	          off_label: 'Disable',
+	        	  width: 60,
+	              height: 20,
+	              button_width: 30
+	    });
+		$("#merchantType").switchButton({
+	          on_label: 'Passive',
+	          off_label: 'Active',
+        	  width: 60,
+              height: 20,
+              button_width: 30
+	    });
+	});
+	/*
+	$(document).ready(function()
+			{
+			var name=$('#businessName').val();
+			var settings = {
+			    url: appendContext("/merchant/uploadFile?name="+name),
+			    dragDrop:true,
+			    fileName: "file",
+			    allowedTypes:"jpg,png,gif,jpeg",	
+			    returnType:"html",
+				 onSuccess:function(files,data,xhr)
+			    {
+					 $('#getMyImageMenu').remove();
+			       if(data=='1'){
+			    	   $('#filePreview').html('<span class="error">File upload failed</span>');
+			       }else if(data=='2'){
+			    	   $('#filePreview').html('<span class="error">File is empty</span>');
+			       }else{
+			    	   $('#iURL').val(data);
+			    	   setTimeout(function() {
+			    	   $('#filePreview').html('<img src="'+data+'" class="imgPreview"/>');
+			    	   }, 1000);
+			       }
+			    },
+			    showDelete:false,
+			    deleteCallback: function(data,pd)
+				{
+			    for(var i=0;i<data.length;i++)
+			    {
+			        $.post("delete.php",{op:"delete",name:data[i]},
+			        function(resp, textStatus, jqXHR)
+			        {
+			            //Show Message  
+			            $("#status").append("<div>File Deleted</div>");      
+			        });
+			     }      
+			    pd.statusbar.hide(); //You choice to hide/not.
+
+			}
+			}
+			var uploadObj = $("#mulitplefileuploader").uploadFile(settings);
+			});
+	*/
+</script>
