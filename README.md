@@ -1,3 +1,2 @@
-The OpenShift `jbossews` cartridge documentation can be found at:
-
-http://openshift.github.io/documentation/oo_cartridge_guide.html#tomcat
+This is a sample panel application made using Spring MVC, Spring Security, Jquery, Javascript.
+Provides functionalities like login, and restarurant menu and order managmen.
