@@ -24,7 +24,7 @@ CREATE TABLE `CATEGORY` (
   `ID` int(4) NOT NULL AUTO_INCREMENT,
   `SHORTNAME` varchar(20) DEFAULT NULL,
   `FULLNAME` varchar(100) DEFAULT NULL,
-  `SORTORDER` char(5) DEFAULT NULL,
+  `SORTORDER` char(50) DEFAULT NULL,
   PRIMARY KEY (`ID`)
 ) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=latin1;
 
@@ -58,7 +58,7 @@ CREATE TABLE `MENU` (
   `PREP_TIME` int(11) DEFAULT NULL COMMENT 'How much time its required to prepare a dish.',
   `CATEGORY` varchar(20) NOT NULL COMMENT 'Category identify the menu item falls under which category',
   `URL` varchar(100) DEFAULT NULL COMMENT 'Item image stored in our public server',
-  `SORTORDER` char(5) DEFAULT '00000',
+  `SORTORDER` char(50) DEFAULT '00000',
   `CREATED_ON` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP COMMENT 'When this menu item is created',
   `CREATED_BY` varchar(20) NOT NULL COMMENT 'Who created this menu item.',
   `MODIFIED_ON` timestamp NULL DEFAULT NULL COMMENT 'When this menu item is modified.',
@@ -278,3 +278,11 @@ insert  into `USERSANDROLES`(`USER_ID`,`ROLE_ID`) values (2000,'2'),(2001,'1'),(
 /*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;
 /*!40014 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
+
+insert into nfc.pmenu(name,uri,role_id,identifier) values('Manage Categories','/merchant/manageCategory',3,'3200000000');
+
+alter table nfc.category modify column SHORTNAME varchar(30) UNIQUE  NOT NULL;
+
+alter table nfc.category add column MERCHANT_ID int(11);
+
+alter table nfc.category add column LEVELNUMBER int(10);
