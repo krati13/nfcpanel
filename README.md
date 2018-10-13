@@ -1,2 +1,2 @@
 This is a sample panel application made using Spring MVC, Spring Security, Jquery, Javascript.
-Provides functionalities like login, and restarurant menu and order managment.
+It includes functionalities like login, and restaurant menu and order management.
