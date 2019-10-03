@@ -1,5 +1,7 @@
 package com.springsecurity.nfc.constants;
-
+/**
+ * Constant file to manage nfc constants.
+ */
 public interface Constants {
 	String INSERT_SQL = "INSERT INTO P1(P2) VALUES(P3)";
 	String UPDATE_SQL = "UPDATE P1 SET P2 WHERE ID=?";
