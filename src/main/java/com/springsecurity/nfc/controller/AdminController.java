@@ -45,11 +45,7 @@ public class AdminController implements Constants{
 	@Transactional(propagation = Propagation.REQUIRED, rollbackFor=Throwable.class)
 	public @ResponseBody Merchant addMerchant(@RequestBody Merchant merchant) {
 		String mType=merchant.getMerchantType();
-//		if(mType==null || !mType.equals("1")){
-//			mType="2";
-//		}else{
-//			mType="3";
-//		}
+
 		merchant.setMerchantType(mType);
 		merchant.setBusinessName(new AlphaNum().replaceSpecials(merchant.getBusinessName(), EMPTY));
 		
